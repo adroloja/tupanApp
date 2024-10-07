@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tupan/data/providers/auth_provider.dart';
+import 'package:tupan/presentation/themes/app_theme.dart';
 import 'package:tupan/routes/app_routes.dart';
 
 void main() {
@@ -18,10 +19,7 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         routerConfig: appRouter,
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
-          useMaterial3: true,
-        ),
+        theme: AppTheme(selectedColor: 1).theme(),
       ),
     );
   }

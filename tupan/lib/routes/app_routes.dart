@@ -1,24 +1,27 @@
 import 'package:go_router/go_router.dart';
-import 'package:tupan/presentation/screens/login_screen.dart';
-import 'package:tupan/presentation/screens/screens.dart';
+import '../routes/screens.dart';
 
 final appRouter = GoRouter(
   routes: [
     GoRoute(
       path: '/',
+      name: LoginScreen.NAME,
       builder: (context, state) => LoginScreen(),
     ),
     GoRoute(
       path: '/signup',
+      name: SignupScreen.NAME,
       builder: (context, state) => const SignupScreen(),
     ),
-    // GoRoute(
-    //   path: '/contact',
-    //   page: ContactPage(),
-    // ),
-    // GoRoute(
-    //   path: '*',
-    //   page: NotFoundPage(),
-    // ),
+    GoRoute(
+      path: '/main',
+      name: MainScreen.NAME,
+      builder: (context, state) => const MainScreen(),
+    ),
+    GoRoute(
+      path: '/clock',
+      name: ClockScreen.NAME,
+      builder: (context, state) => ClockScreen(),
+    ),
   ],
 );

@@ -8,6 +8,7 @@ import 'package:tupan/utils/constants.dart';
 import 'package:tupan/utils/secure_storage.dart';
 
 class LoginScreen extends StatefulWidget {
+  static const String NAME = "login";
   LoginScreen({Key? key}) : super(key: key);
 
   @override
@@ -139,18 +140,16 @@ class _LoginScreenState extends State<LoginScreen> {
         context.go('/main'); // Ajusta esto a la ruta de tu pantalla principal
       } else {
         Fluttertoast.showToast(
-          fontSize: 18,
           toastLength: Toast.LENGTH_LONG,
           msg:
-              '\n Error al iniciar sesión, compruebe que su correo está verificado y/o la contraseña sea correcta \n',
+              ' Error al iniciar sesión, compruebe que su correo está verificado y/o la contraseña sea correcta ',
         );
       }
     } catch (e) {
       Fluttertoast.showToast(
-        fontSize: 18,
         toastLength: Toast.LENGTH_LONG,
         msg:
-            '\n Usuario y/o contraseña incorrectos. Por favor, inténtelo de nuevo \n',
+            ' Usuario y/o contraseña incorrectos. Por favor, inténtelo de nuevo ',
       );
     } finally {
       setState(() {
