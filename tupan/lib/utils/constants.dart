@@ -16,4 +16,5 @@ class Credentials {
   static String? username;
   static String? firstName;
   static String? lastName;
+  static bool? clockIsComplete;
 }

@@ -3,7 +3,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart'; // Asegúrate de importar provider
 import 'package:tupan/data/providers/auth_provider.dart';
-import 'package:tupan/logic/controller/authenticate.dart';
+import 'package:tupan/data/repositories/authenticate.dart';
 import 'package:tupan/utils/constants.dart';
 import 'package:tupan/utils/secure_storage.dart';
 

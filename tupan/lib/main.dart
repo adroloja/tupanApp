@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tupan/data/providers/auth_provider.dart';
+import 'package:tupan/data/providers/clock_provider.dart';
 import 'package:tupan/presentation/themes/app_theme.dart';
 import 'package:tupan/routes/app_routes.dart';
 
@@ -14,7 +15,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => AuthProvider())],
+      providers: [
+        ChangeNotifierProvider(create: (_) => AuthProvider()),
+        ChangeNotifierProvider(create: (_) => ClockProvider()),
+      ],
       child: MaterialApp.router(
         title: 'Flutter Demo',
         routerConfig: appRouter,
